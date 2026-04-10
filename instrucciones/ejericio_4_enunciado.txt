@@ -1,0 +1,36 @@
+APARTADO 4: DESARROLLO (Puntuación: 1.5 puntos)
+
+Esta sección se divide en dos partes principales que debes redactar en tu memoria: Descripción y Resultados.
+
+--- PARTE 4.1: DESCRIPCIÓN (0.45 puntos) ---
+Aquí debes detallar cómo has preparado los datos antes de dárselos a los algoritmos. Debes incluir:
+
+1. Descripción final de la base de datos: Aunque ya la describiste en el ejercicio 2, aquí debes indicar si has eliminado algún atributo irrelevante y confirmar con cuántos patrones, entradas y clases te has quedado finalmente para entrenar.
+2. Preprocesado de los datos: Debes explicar cómo has normalizado los datos. Es obligatorio justificar por qué has elegido ese tipo de normalización, los parámetros usados (mínimo, máximo, media, etc.), o justificar por qué has decidido no normalizarlos.
+3. Configuración de los experimentos: Explicar la metodología de evaluación, indicando por ejemplo que usarás validación cruzada y el número de particiones (folds) que vas a utilizar.
+4. (Opcional pero recomendado): Incluir gráficas o tablas que muestren la distribución de los datos.
+
+--- PARTE 4.2: RESULTADOS (0.6 puntos) ---
+Esta es la parte puramente experimental. Tienes que entrenar y evaluar 5 algoritmos distintos de Aprendizaje Automático utilizando las funciones de tu Práctica 1. Para cada técnica, debes probar diferentes hiperparámetros y mostrar los resultados usando las métricas que definiste en el Ejercicio 2 (Accuracy, F1-Score, etc.). 
+
+Los experimentos obligatorios mínimos para cada técnica son:
+
+1. Redes Neuronales Artificiales (RR.NN.AA.): 
+   - Probar al menos 8 arquitecturas distintas.
+   - Variar entre 1 y 2 capas ocultas.
+
+2. DoME: 
+   - Probar al menos 8 valores distintos para el número de nodos.
+   - Ajustar el intervalo donde se obtengan los mejores resultados.
+
+3. Máquinas de Vectores de Soporte (SVM): 
+   - Probar distintas combinaciones de funciones kernel y valores de penalización C.
+   - Probar como mínimo 8 configuraciones distintas.
+
+4. Árboles de Decisión: 
+   - Probar al menos 6 valores distintos de profundidad máxima del árbol.
+
+5. k-Vecinos Más Cercanos (kNN): 
+   - Probar al menos 6 valores distintos para el parámetro "k" (número de vecinos).
+
+Nota: Recuerda que para todos estos experimentos, los resultados numéricos de las tablas deben coincidir exactamente con los que salgan al ejecutar tu código en Julia, ya que el profesor lo comprobará.
