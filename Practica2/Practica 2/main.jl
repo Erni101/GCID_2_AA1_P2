@@ -1,6 +1,11 @@
 import Pkg
-Pkg.activate(@__DIR__)
-Pkg.instantiate()
+paquetes = ["CSV", "DataFrames", "Flux", "LIBSVM", "MLJ", "MLJDecisionTreeInterface", "MLJLIBSVMInterface", "NearestNeighborModels", "PrettyTables", "SymDoME", "DecisionTree"]
+for p in paquetes
+    if Base.find_package(p) === nothing
+        println("Descargando e instalando paquete necesario: ", p)
+        Pkg.add(p)
+    end
+end
 
 using Random
 using Statistics
