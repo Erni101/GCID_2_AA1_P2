@@ -215,7 +215,7 @@ function describe_setup(
     println("\n4) Distribucion de clases")
     class_df = combine(groupby(DataFrame(clase=targets), :clase), nrow => :conteo)
     sort!(class_df, :clase)
-    pretty_table(class_df, crop=:none)
+    pretty_table(class_df; display_size=(-1, -1))
 
     params_df = DataFrame(
         feature = expanded_feature_names,
@@ -389,7 +389,7 @@ function run_exercise_4()
         ))
 
         println("\n", model_name, ":")
-        pretty_table(round_numeric_df(first(df_model, min(5, nrow(df_model))), digits=4), crop=:none)
+        pretty_table(round_numeric_df(first(df_model, min(5, nrow(df_model))), digits=4); display_size=(-1, -1))
         println("\nGuardado: ", output_file)
     end
 
@@ -422,7 +422,7 @@ function run_exercise_4()
     println("\n==========================")
     println("Resumen mejores modelos")
     println("==========================")
-    pretty_table(round_numeric_df(best_df, digits=4), crop=:none)
+    pretty_table(round_numeric_df(best_df, digits=4); display_size=(-1, -1))
     println("\n\nResumen guardado en: ", best_file)
 
     info_df = DataFrame(
