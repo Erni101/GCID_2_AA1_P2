@@ -400,7 +400,8 @@ function run_exercise_4()
         println("\n", model_name, ":")
         print_df = round_numeric_df(first(df_model, min(5, nrow(df_model))), digits=4)
         rename!(print_df, :Configuracion => :Conf, :AccuracyMedia => :Acc, :AccuracySTD => :Acc_sd, :ErrorMedia => :Err, :ErrorSTD => :Err_sd, :RecallMedia => :Rec, :RecallSTD => :Rec_sd, :SpecificityMedia => :Spec, :SpecificitySTD => :Spec_sd, :PrecisionMedia => :Prec, :PrecisionSTD => :Prec_sd, :NPVMedia => :NPV, :NPVSTD => :NPV_sd, :F1Media => :F1, :F1STD => :F1_sd)
-        pretty_table(print_df)
+        print_df[!, :Conf] = [length(string(c)) > 40 ? string(c)[1:37] * "..." : string(c) for c in print_df[!, :Conf]]
+        pretty_table(print_df; display_size=(-1, -1))
         println("\nGuardado: ", output_file)
     end
 
@@ -435,7 +436,8 @@ function run_exercise_4()
     println("==========================")
     print_best_df = round_numeric_df(best_df, digits=4)
     rename!(print_best_df, :MejorConfiguracion => :Conf, :AccuracyMedia => :Acc, :AccuracySTD => :Acc_sd, :ErrorMedia => :Err, :ErrorSTD => :Err_sd, :RecallMedia => :Rec, :RecallSTD => :Rec_sd, :SpecificityMedia => :Spec, :SpecificitySTD => :Spec_sd, :PrecisionMedia => :Prec, :PrecisionSTD => :Prec_sd, :NPVMedia => :NPV, :NPVSTD => :NPV_sd, :F1Media => :F1, :F1STD => :F1_sd)
-    pretty_table(print_best_df)
+    print_best_df[!, :Conf] = [length(string(c)) > 40 ? string(c)[1:37] * "..." : string(c) for c in print_best_df[!, :Conf]]
+    pretty_table(print_best_df; display_size=(-1, -1))
     println("\n\nResumen guardado en: ", best_file)
 
     info_df = DataFrame(
