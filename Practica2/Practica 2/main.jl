@@ -1,3 +1,7 @@
+import Pkg
+Pkg.activate(@__DIR__)
+Pkg.instantiate()
+
 using Random
 using Statistics
 using Printf

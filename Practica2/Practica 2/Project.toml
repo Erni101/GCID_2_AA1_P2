@@ -1,0 +1,19 @@
+[deps]
+CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
+DataFrames = "a93c6f00-3f6e-568b-8a00-3d5f4f4c0f9c"
+DelimitedFiles = "8bb1440f-4735-579b-a4ab-409b98df4dab"
+Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
+Flux = "587475ba-b771-5e3f-ad9e-33799f191a9c"
+LIBSVM = "b999e6be-6317-5fdb-9b7c-3e7b74a6d1f4"
+MLJ = "add582a8-e3ab-11e8-2d5e-5b4c1a0f3f1a"
+MLJDecisionTreeInterface = "c6b6f1c0-7021-11ea-2a65-6b2a1f4f9f74"
+MLJLIBSVMInterface = "1d1c1a29-19b3-55a5-9b8b-7a6c37f0cf0f"
+NearestNeighborModels = "b0ac5d7e-7f27-5d14-9e6f-9f5dc0f1f1b3"
+PrettyTables = "08abe8d2-0d0c-5749-adfa-8a2ac140af0a"
+Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
+Random = "9a3f8284-71f7-5f36-a0e4-8e2d9d8a16d6"
+Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
+SymDoME = "4cde3a86-2bfc-4f66-8d0a-1e7f1f1b7c91"
+
+[compat]
+julia = "1"
