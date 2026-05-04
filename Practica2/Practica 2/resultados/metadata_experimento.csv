@@ -1,0 +1,10 @@
+clave,valor
+fecha_ejecucion,2026-05-04T20:38:06.849
+dataset,C:\Users\ejgra\OneDrive\Escritorio\CIENCIA E INGENIERIA DE DATOS\SEGUNDO CURSO\SEGUNDO CUATRI\AA1\PRACTICAS\PRACTICA_GORDOS\Practica2\Practica 2\datos\datos.csv
+num_patrones,2111
+num_features_originales,16
+num_features_codificadas,26
+num_clases,7
+k_folds,5
+seed,2026
+archivo_indices_cv,C:\Users\ejgra\OneDrive\Escritorio\CIENCIA E INGENIERIA DE DATOS\SEGUNDO CURSO\SEGUNDO CUATRI\AA1\PRACTICAS\PRACTICA_GORDOS\Practica2\Practica 2\resultados\indices_cv.csv
