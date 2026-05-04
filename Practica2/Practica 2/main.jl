@@ -224,7 +224,7 @@ function describe_setup(
     println("\n4) Distribucion de clases")
     class_df = combine(groupby(DataFrame(clase=targets), :clase), nrow => :conteo)
     sort!(class_df, :clase)
-    pretty_table(class_df; display_size=(-1, -1))
+    pretty_table(class_df)
 
     params_df = DataFrame(
         feature = expanded_feature_names,
